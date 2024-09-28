@@ -22,7 +22,7 @@
 <body class="font-lexend md:container mx-auto">
     <header>
         <!-- navbar started -->
-        <nav>
+        <nav class="fixed top-0 z-10 w-full">
             <div class="navbar bg-red-100 py-8">
                 <div class="navbar-start">
                     <a id="btn-blog" class="btn bg-green-400 border-none px-5 text-lg">Blog</a>
@@ -41,7 +41,7 @@
         </nav>
 
         <!-- hero section started -->
-         <div class="mt-20 flex justify-center gap-8">
+         <div class="mt-60 flex justify-center gap-8">
             <button id="btn-donation" class="btn bg-green-400 hover:bg-green-400 sm:btn-sm md:btn-md lg:btn-lg">Donation</button>
             <button id="btn-history" class="btn bg-none hover:bg-green-400 sm:btn-sm md:btn-md lg:btn-lg">History</button>
          </div>
@@ -127,14 +127,15 @@
         <!-- card-3 section ends here -->
         </section>
 
+        <!-- history section starts here -->
+         <section id="history-section" class="hidden">
+          <div class="hero">
+            <h1 class="text-5xl font-bold mt-5">Transaction history</h1></div>
+                <div id="transaction-container" class="mx-auto mt-5 w-4/5 py-10 px-5 ml-5 rounded-xl border border-gray-200">
 
-        <!-- history section -->
-         <section class="flex flex-col justify-center items-center">
-          <h1>Transaction history</h1>
-        <div id="transaction-container">
-
-        </div>
+                </div>
          </section>
+         <!-- history section ends here -->
 
     </main>
 

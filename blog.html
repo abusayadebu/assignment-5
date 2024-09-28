@@ -21,27 +21,88 @@
 </head>
 
 <body class="font-lexend md:container mx-auto">
-    <main>
-       <section class="flex flex-col justify-center items-center">
+  <header>
+      <!-- navbar started -->
+      <nav class="fixed top-0 z-10 w-full">
+        <div class="navbar bg-red-100 py-8">
+            <div class="navbar-start">
+                <a id="btn-blog" class="btn bg-green-400 border-none px-5 text-lg">Blog</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <div class="flex justify-center items-center w-full">
+                    <img class="mb-5" src="./assets/logo.png" alt="">
+              <h1 class="ml-5 w-full text-lg text-extrabold">Donate Bangladesh</h1>
+            </div>
+            </div>
+            <div class="navbar-end">
+                <img src="./assets/coin.png" alt="">
+                <div id="current-balance" class="text-lg">5500 BDT</div>
+            </div>
+          </div>
+    </nav>
+  </header>
+
+
+    <main class="bg-base-200">
+       <section class="min-h-screen flex flex-col justify-center items-center">
         <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-xl font-medium">
+              1. What is the Document Object Model (DOM)?
+            </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p><strong>Document Object Model (DOM): </strong><br>
+
+                <ul>
+                  <li>A representation of an HTML document as a tree structure.</li>
+                  <li>Each element, attribute, and text node in the HTML document is represented as an object in the DOM.</li>
+                  <li>JavaScript can interact with the DOM to dynamically modify the content, structure, and style of the page.</li>
+                </ul>
+              </p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-xl font-medium">
+              2. How do you select an element from the DOM?
+            </div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p> <strong>Selecting an Element: </strong><br> </p>
+              <ul>
+                <li>getElementById: Selects an element by its unique ID attribute.</li>
+                <li>getElementsByTagName: Selects elements by their tag name.</li>
+                <li>getElementsByClassName: Selects elements by their class name.</li>
+                <li>querySelector: Selects the first element that matches a CSS selector.</li>
+              </ul>
+                
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-title text-xl font-medium">3. What is event delegation in the context of the DOM, and why is it useful?</div>
             <div class="collapse-content">
-              <p>hello</p>
+              <p><strong>Event Delegation: </strong></p>
+              <ul>
+                <li>A technique where a single event handler is attached to a parent element, and the event is propagated to the appropriate child element.</li>
+                <li>This is useful for handling events on dynamically created elements or when you need to avoid attaching multiple event handlers to individual elements.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-xl font-medium">4. How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p><strong>Manipulating Attributes and Styles: </strong></p>
+              <ul>
+                <li><strong>Attributes: </strong> <br>
+                  getAttribute: Retrieves the value of an attribute. <br>
+                  setAttribute: Sets the value of an attribute. <br>
+                  removeAttribute: Removes an attribute.</li>
+                <li><strong>Styles: </strong>
+                  style.property: Accesses or sets a style property directly. <br>
+                  classList: Adds, removes, or toggles classes for styling. <br>
+                  getComputedStyle: Retrieves the computed style of an element, including inherited styles.</li>
+              </ul>
             </div>
           </div>
        </section>

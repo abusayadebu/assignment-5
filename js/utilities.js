@@ -16,3 +16,6 @@ function getTextFieldValueById (id){
 
 
 // history section function
+function getSectionById (id){
+    document.getElementById('history-section').classList.remove('hidden');
+}

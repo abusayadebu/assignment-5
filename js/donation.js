@@ -2,6 +2,7 @@ document.getElementById('btn-donation')
 .addEventListener('click', function(){
     console.log('btn donation clicked')
     document.getElementById('all-card-container').classList.remove('hidden');
+    document.getElementById('history-section').classList.add('hidden');
     
 })
 
@@ -10,7 +11,8 @@ document.getElementById('btn-donation')
 document.getElementById('btn-history').addEventListener('click', function(){
     console.log('history button clicked');
     document.getElementById('all-card-container').classList.add('hidden');
-    window.location.href = './history.html';
+    const historySection = getSectionById('history-section');
+    console.log(historySection);
 
 })
 
@@ -43,6 +45,13 @@ document.getElementById('btn-donate-now')
     console.log(updatedDonateBalance);
     document.getElementById('donate-balance').innerText = updatedDonateBalance;
 
+    // transaction history
+    const p = document.createElement('p');
+    p.innerText = `${updatedDonateBalance} Taka Donated and Available Balance is ${updatedBalance} Taka`;
+    console.log(p);
+
+    // showing the history
+    document.getElementById('transaction-container').appendChild(p);
 
     } 
     
