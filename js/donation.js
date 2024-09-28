@@ -10,6 +10,8 @@ document.getElementById('btn-donation')
 document.getElementById('btn-history').addEventListener('click', function(){
     console.log('history button clicked');
     document.getElementById('all-card-container').classList.add('hidden');
+    window.location.href = './history.html';
+
 })
 
 
@@ -20,32 +22,27 @@ document.getElementById('btn-donate-now')
     console.log('donate now button clicked');
 
     // get the money from input
-    const inputMoney = document.getElementById('input-money').value;
+    const inputMoney = getInputFieldValueById('input-money');
     console.log(inputMoney);
 
     if (!isNaN(inputMoney)) {
-        console.log('Your donation added');
+      console.log('Your donation added');
 
-        // get the current balance and donate balance
-        const currentBalance = document.getElementById('current-balance').innerText;
-        console.log(currentBalance);
+    //   get the current balance and donate balance
+    const currentBalance = getTextFieldValueById('current-balance')
+    console.log(currentBalance);
+    const donateBalance = getTextFieldValueById('donate-balance')
+    console.log(donateBalance);
 
-        const donateBalance = document.getElementById('donate-balance').innerText;
-        console.log(donateBalance);
+    // decrease money from the current balance and add to the donate balance and show balance
+    const updatedBalance = currentBalance - inputMoney;
+    console.log(updatedBalance);
+    document.getElementById('current-balance').innerText = updatedBalance
 
-        // decrease money from the current balance and add to the donate balance
-        const currentBalanceNumber = parseFloat(currentBalance);
-        const inputMoneyNumber = parseFloat(inputMoney)
-        const donateBalanceNumber = parseFloat(donateBalance)
+    const updatedDonateBalance = donateBalance + inputMoney;
+    console.log(updatedDonateBalance);
+    document.getElementById('donate-balance').innerText = updatedDonateBalance;
 
-        const updatedBalance = currentBalanceNumber - inputMoneyNumber;
-        console.log(updatedBalance);
-        
-        const updatedDonateBalance = donateBalanceNumber + inputMoneyNumber;
-
-        // showing current balance and donate balance in UI
-        document.getElementById('current-balance').innerText = updatedBalance;
-        document.getElementById('donate-balance').innerText = updatedDonateBalance;
 
     } 
     
@@ -53,4 +50,11 @@ document.getElementById('btn-donate-now')
         alert('Sorry, your input is wrong.');
     }
 
-})
+
+
+    // const inputMoney2 = getInputFieldValueById('btn-donate-now-two');
+    // console.log(inputMoney2);
+
+
+
+}) 

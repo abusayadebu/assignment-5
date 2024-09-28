@@ -25,7 +25,7 @@
         <nav>
             <div class="navbar bg-red-100 py-8">
                 <div class="navbar-start">
-                    <a class="btn bg-green-400 border-none px-5 text-lg">Blog</a>
+                    <a id="btn-blog" class="btn bg-green-400 border-none px-5 text-lg">Blog</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <div class="flex justify-center items-center w-full">
@@ -47,7 +47,7 @@
          </div>
     </header>
 
-    <main>
+    <main class="md:container mx-auto">
       <!-- cards started here -->
         <section id="all-card-container">
           <!-- card-1 section starts here -->
@@ -93,7 +93,7 @@
                         The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                     </p>
                     <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full mb-5" /> <br>
-                    <button id="" class="btn w-full bg-green-400 hover:bg-green-400">Donate Now</button>
+                    <button id="btn-donate-now-two" class="btn w-full bg-green-400 hover:bg-green-400">Donate Now</button>
                   </div>
                 </div>
               </div>
@@ -127,12 +127,24 @@
         <!-- card-3 section ends here -->
         </section>
 
+
+        <!-- history section -->
+         <section class="flex flex-col justify-center items-center">
+          <h1>Transaction history</h1>
+        <div id="transaction-container">
+
+        </div>
+         </section>
+
     </main>
 
     <footer>
 
     </footer>
     <script src="./js/donation.js"></script>
+    <script src="./js/utilities.js"></script>
     <script src="./js/features.js"></script>
+    <script src="./js/history.js"></script>
+
 </body>
 </html>
